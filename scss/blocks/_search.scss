@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.search {
+  position: relative;
+
+  &__input {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+    font-size: 17px;
+    color: color(text);
+    background: color(surface);
+    border: 2px solid color(accent);
+    border-radius: $radius-md;
+    outline: none;
+  }
+
+  &__clear {
+    @include button-reset;
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    padding: 4px 8px;
+    font-size: 22px;
+    color: color(muted);
+
+    &[hidden] {
+      display: none;
+    }
+  }
+}

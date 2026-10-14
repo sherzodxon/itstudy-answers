@@ -1,0 +1,4 @@
+// Mavzu rangiga murojaat: color(accent) -> var(--accent)
+@function color($name) {
+  @return var(--#{$name});
+}

@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "variables" as *;
+@use "functions" as *;
+
+@mixin theme-vars($theme) {
+  @each $name, $value in map.get($themes, $theme) {
+    --#{$name}: #{$value};
+  }
+}
+
+@mixin container {
+  max-width: $container-width;
+  margin-inline: auto;
+}
+
+// Tugma uslubini nollash — barcha tugmalar shundan boshlanadi.
+@mixin button-reset {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+// Chegarali sirt (kartochka, tugma, chip uchun umumiy).
+@mixin surface($radius: $radius-md, $bg: surface) {
+  background: color($bg);
+  border: 1px solid color(line);
+  border-radius: $radius;
+}

@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: $z-lightbox;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: $gutter;
+  background: rgb(0 0 0 / 85%);
+  cursor: zoom-out;
+
+  &--open {
+    display: flex;
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 100%;
+    background: #fff;
+    border-radius: 8px;
+  }
+}

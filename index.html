@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test javoblari</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__title">
+        Test javoblari
+        <span class="header__progress"></span>
+      </h1>
+
+      <div class="search">
+        <input class="search__input" type="search" autocomplete="off" autofocus
+          placeholder="Savoldan yoki variantdan 1–2 so‘z yozing…">
+        <button class="search__clear" type="button" aria-label="Tozalash" hidden>×</button>
+      </div>
+
+      <div class="toolbar">
+        <button class="chip chip--active" type="button" data-part="0">Hammasi</button>
+        <button class="chip" type="button" data-part="1">1-qism (8)</button>
+        <button class="chip" type="button" data-part="2">2-qism (15)</button>
+        <span class="toolbar__spacer"></span>
+        <button class="chip" type="button" data-action="hide-found">Topilganlarni yashir</button>
+        <button class="toolbar__reset" type="button" data-action="reset">Belgilarni tozalash</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="results">
+    <p class="results__hint">
+      Diqqat: variantlar o‘rni almashgan bo‘lishi mumkin — <b>harfga emas, javob matniga</b> qarang.
+    </p>
+    <div class="results__list"></div>
+  </main>
+
+  <div class="lightbox">
+    <img class="lightbox__image" alt="Asl skrinshot">
+  </div>
+</body>
+</html>

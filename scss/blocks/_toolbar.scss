@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+
+  &__spacer {
+    flex: 1;
+  }
+
+  &__reset {
+    @include button-reset;
+    font-size: 13px;
+    color: color(muted);
+    text-decoration: underline;
+  }
+}
+
+.chip {
+  @include button-reset;
+  @include surface($radius-pill);
+  padding: 6px 12px;
+  font-size: 14px;
+
+  &--active {
+    background: color(accent);
+    border-color: color(accent);
+    color: #fff;
+  }
+}

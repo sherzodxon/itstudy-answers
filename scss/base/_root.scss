@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+:root {
+  @include theme-vars(light);
+
+  @media (prefers-color-scheme: dark) {
+    @include theme-vars(dark);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: color(bg);
+  color: color(text);
+  font: #{$font-size-base}/1.45 $font-family;
+}

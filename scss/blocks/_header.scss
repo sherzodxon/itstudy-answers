@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  background: color(bg);
+  border-bottom: 1px solid color(line);
+  padding: 12px $gutter 10px;
+
+  &__inner {
+    @include container;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+
+  &__progress {
+    font-size: 14px;
+    font-weight: 500;
+    color: color(muted);
+    white-space: nowrap;
+  }
+}

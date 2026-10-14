@@ -1,0 +1,78 @@
+@use "../abstracts" as *;
+
+.card {
+  @include surface($radius-lg);
+  margin-bottom: 12px;
+  padding: 14px;
+
+  &--found {
+    opacity: 0.45;
+  }
+
+  &__tag {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: color(accent);
+    background: color(accent-soft);
+    border-radius: $radius-pill;
+  }
+
+  &__question {
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  &__answer {
+    padding: 10px 12px;
+    font-size: 17px;
+    font-weight: 700;
+    color: color(ok);
+    background: color(ok-soft);
+    border-radius: $radius-sm;
+  }
+
+  &__answer-label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  &__options {
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: color(muted);
+  }
+
+  &__option {
+    padding: 2px 0;
+    text-decoration: line-through;
+    text-decoration-color: rgb(128 128 128 / 50%);
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+}
+
+.button {
+  @include button-reset;
+  @include surface($radius-sm, bg);
+  flex: 1;
+  padding: 9px;
+  font-size: 14px;
+
+  &--done {
+    background: color(ok);
+    border-color: color(ok);
+    color: #fff;
+  }
+}
